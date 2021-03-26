@@ -1,0 +1,208 @@
+/*--------------------------------------------------------------
+  # Navigation Menu
+  --------------------------------------------------------------*/
+
+
+/* Desktop Navigation */
+
+.nav-menu {
+    margin-top: 35px;
+    ul {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    li+li {
+        margin-left: 30px;
+    }
+    a {
+        display: block;
+        position: relative;
+        color: $nav-color;
+        font-size: $nav-fs;
+        line-height: $nav-lh;
+        font-weight: $nav-fw;
+        &:before {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            width: 0;
+            height: 10px;
+            bottom: 0;
+            left: 0;
+            background-color: $primary;
+            visibility: hidden;
+            width: 0px;
+            border-radius: 50px;
+            transition: all 0.3s ease-in-out 0s;
+        }
+        &:hover:before {
+            visibility: visible;
+            width: 25px;
+        }
+    }
+    li:hover>a:before,
+    .active>a:before {
+        visibility: visible;
+        width: 90%;
+    }
+    a:hover,
+    .active>a,
+    li:hover>a {
+        color: #fff;
+        text-decoration: none;
+    }
+}
+
+
+/* Mobile Navigation */
+
+.mobile-nav-toggle {
+    position: fixed;
+    right: 35px;
+    top: 35px;
+    z-index: 10000;
+    border: 0;
+    background: none;
+    font-size: 24px;
+    transition: all 0.4s;
+    outline: none !important;
+    line-height: 1;
+    cursor: pointer;
+    text-align: right;
+    &.contrast {
+        background: #fff;
+        width: 50px;
+        height: 50px;
+        border-radius: 99%;
+        padding: 10px 0 0 8px;
+        bottom: 35px;
+        top: auto;
+        right: calc(50vw - 35px);
+        i {
+            color: $mobile-nav-color-contrast;
+        }
+        .bar {
+            background: $mobile-nav-color-contrast;
+        }
+    }
+    .bar {
+        position: relative;
+        width: 35px;
+        height: 4px;
+        background: $nav-color;
+    }
+    .bar:before {
+        top: -10px;
+    }
+    .bar:before,
+    .bar:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: inherit;
+        left: 0;
+        -webkit-transform-origin: center center;
+        transform-origin: center center;
+        -webkit-transition: top $spd ease, bottom $spd ease, -webkit-transform $spd ease;
+        transition: top $spd ease, bottom $spd ease, -webkit-transform $spd ease;
+        transition: transform $spd ease, top $spd ease, bottom $spd ease;
+        transition: transform $spd ease, top $spd ease, bottom $spd ease, -webkit-transform $spd ease;
+    }
+}
+
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    right: -50%;
+    bottom: 0;
+    z-index: 9999;
+    overflow-y: auto;
+    background: rgba(0, 0, 0, 0.7);
+    transition: ease-in-out $spd;
+    opacity: 0;
+    visibility: hidden;
+    border-radius: 0;
+    padding: 2rem 2rem;
+    border: 0;
+    text-align: right;
+    width: 60%;
+    * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    a {
+        display: block;
+        position: relative;
+        color: $nav-color;
+        padding: 0.5rem 1rem;
+        font-size: $m-nav-fs;
+        line-height: $m-nav-lh;
+        font-weight: $m-nav-fw;
+        outline: none;
+        &:hover {
+            color: $primary;
+            text-decoration: none;
+        }
+    }
+    ul {
+        margin: 6rem 1rem 0 0;
+    }
+    .active>a {
+        color: $primary;
+    }
+    .active>a,
+    li {
+        margin-top: 1rem;
+    }
+    li:hover>a {
+        color: $primary;
+        text-decoration: none;
+    }
+}
+
+.mobile-nav-overly {
+    width: 100%;
+    height: 100%;
+    z-index: 9997;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: rgba(9, 9, 9, 0.8);
+    overflow: hidden;
+    display: none;
+}
+
+.mobile-nav-active {
+    overflow: hidden;
+    .mobile-nav {
+        opacity: 1;
+        visibility: visible;
+        right: 0;
+    }
+    .mobile-nav-toggle .bar {
+        background: transparent;
+    }
+    .mobile-nav-toggle .bar:before,
+    .mobile-nav-toggle .bar:after {
+        background: $nav-color;
+    }
+    .mobile-nav-toggle .bar:after {
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        bottom: 0;
+    }
+    .mobile-nav-toggle .bar:before {
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        top: 0;
+    }
+    @media (max-width:420px) {
+        .mobile-nav {
+            width: 100%;
+        }
+    }
+}

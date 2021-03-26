@@ -1,0 +1,174 @@
+/*-COLORS-*/
+
+
+/*
+$blue: #007bff;
+$indigo: #6610f2;
+$purple: #6f42c1;
+$pink: #e83e8c;
+$red: #dc3545;
+$orange: #fd7e14;
+$yellow: #ffc107;
+$green: #28a745;
+$teal: #20c997;
+$caribbean-green:#35e888;
+$cyan: #17a2b8;
+$white: #fff;
+$gray: #6c757d;
+$gray-dark: #343a40;
+$lime: #b0eb00;
+$bright-red: #b30015;
+$dark-blue: #2a00b3;
+$deep-cerulean: #0077b3;
+$bondi-blue: #00b0b3;
+$cyan: #24fbff;
+$heliotrope: #8a7dff;
+$silver-chalice: #a6a6a6;
+$scorpion: #595959;
+$tundora: #444;
+$mine-shaft: #363636;
+$cod-gray: #111;
+*/
+
+
+/*--
+
+$yellow-1: #F6E58D;
+$yellow-2: #F9CA24;
+$orange-1:#FFBE76;
+$orange-2:#F0932B;
+$green-1:#BADC58;
+$green-2:#6AB04C;
+$red-1:#FF7979;
+$red-2:#EB4D4B;*/
+
+
+/*-Colores-*/
+
+$success: #28a745;
+$info: #17a2b8;
+$warning: #ffc107;
+$danger: #dc3545;
+$light: #f8f9fa;
+$dark: #343a40;
+$gray-100:#f5f5f5;
+$gray-200: #eeeeee;
+$gray-300: #dddddd;
+$gray-400: #cccccc;
+$gray-500: #555555;
+$gray-600: #444444;
+
+/*-themes-*/
+
+$primary:#35e888;
+$secondary: #8a7dff;
+$secondary-100: #C869FF;
+$secondary-200: #FAADFF;
+$tertiary:#F9CA24;
+//
+$font-color:#000;
+//
+$nav-bg-color: transparent;
+$nav-color: #fff;
+$nav-color-contrast: #000;
+$nav-bg-color-contrast: #fff;
+$mobile-nav-color-contrast: $primary;
+$mobile-nav-bg-color-contrast: transparent;
+$h1-color:#fff;
+$h2-color:#fff;
+$h3-color:#fff;
+$bullet-color-1:$tertiary;
+$cta-color: $tertiary;
+$error-color:$danger;
+//
+@mixin sombra($disipacion) {
+    -webkit-box-shadow: 0px 10px $disipacion 0px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: 0px 10px $disipacion 0px rgba(0, 0, 0, 0.05);
+    box-shadow: 0px 10px $disipacion 0px rgba(0, 0, 0, 0.05);
+}
+
+
+/*-Tipografias-*/
+
+$h-font: "Poppins",
+sans-serif;
+$font: "Poppins",
+sans-serif;
+$fs: 1.6rem;
+$lh: 1.6;
+$lttspa: -0.7px;
+$fs-h1: 4rem;
+$lh-h1: 4.5rem;
+$fw-h1: 700;
+$lttspa-h1: -0.03rem;
+$fs-h2: 2.4rem;
+$lh-h2: 3rem;
+$fw-h2: 700;
+$lttspa-h2: -0.04rem;
+$fs-h3: 2rem;
+$fw-h3: 400;
+$lh-h3: 2rem;
+$lttspa-h3: -0.04rem;
+$fs-h4: 1.8rem;
+$fs-h6: 1.4rem;
+$nav-fs: 1.4rem;
+$nav-lh: 1.4rem;
+$nav-fw: 700;
+$m-nav-fs: 2rem;
+$m-nav-lh: 2rem;
+$m-nav-fw: 900;
+$image-text-over-color:rgba(255, 255, 255, 1);
+
+/*Transiciones*/
+
+$spd: 0.2s;
+$header-transition: ease-in-out $spd; // 0.3s
+$section-transition: ease-in-out $spd; // 0.4
+$form-transition: $spd;
+$body-transition: ease-in-out $spd*4;
+$portfolio-transitions: all $spd/2 ease-in-out; // 0.3s
+$portfolio-wrap-transitions: $spd/2;
+$portfolio-info-transitions: all $spd ease 0s;
+$portfolio-link-transitions: all $spd ease 0s;
+$servicios-transitions: all ease-in-out $spd;
+$servicios-icons-transitions: all $spd ease-out 0s;
+
+/* Images */
+
+@mixin cover() {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+@mixin contain() {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+@mixin appBg() {
+    /*background-color: $general-bg-color;*/
+    /* fallback for old browsers */
+    /*background: -webkit-linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.1)), url("https://source.unsplash.com/random");*/
+    /* Chrome 10-25, Safari 5.1-6 */
+    /*background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.1)), url("https://source.unsplash.com/random");*/
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-position: top center;
+    background-repeat: no-repeat;
+}
+
+@mixin gradiente-1() {
+    background: #cfd9df;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-image: linear-gradient(0deg, #cfd9df 0%, #e2ebf0 100%);
+}
+
+
+/**/

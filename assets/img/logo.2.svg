@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="131.07" height="131.07" viewBox="0 0 131.07 131.07">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectángulo_179" data-name="Rectángulo 179" width="76" height="77" rx="3" transform="translate(0.291 0.362)" fill="#686de0"/>
+    </clipPath>
+  </defs>
+  <g id="Logo_Negativo_2" data-name="Logo Negativo 2" transform="translate(-214.667 -71.167)">
+    <path id="Trazado_1417" data-name="Trazado 1417" d="M65.535,0A65.535,65.535,0,1,1,0,65.535,65.535,65.535,0,0,1,65.535,0Z" transform="translate(214.667 71.167)" fill="#686de0"/>
+    <g id="Enmascarar_grupo_8" data-name="Enmascarar grupo 8" transform="translate(240.709 97.638)" clip-path="url(#clip-path)">
+      <g id="Grupo_1175" data-name="Grupo 1175" transform="translate(1.44 1.011)">
+        <path id="Trazado_1418" data-name="Trazado 1418" d="M1710.188,163.9V87.419h17.079V163.9h-17.079" transform="translate(-1710.188 -87.419)" fill="#fff"/>
+        <path id="Trazado_1419" data-name="Trazado 1419" d="M1783.668,88.312v76.825h-16.876l.826-76.825Z" transform="translate(-1707.348 -88.312)" fill="#fff"/>
+        <path id="Trazado_1420" data-name="Trazado 1420" d="M1710.018,87.312h16.959l28.876,39.513-11.388,14.291Z" transform="translate(-1709.528 -87.312)" fill="#fff"/>
+        <path id="Trazado_1421" data-name="Trazado 1421" d="M1710.757,165l57.579-76.692h18.527L1729.179,165h-18.422" transform="translate(-1710.542 -88.312)" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg>
