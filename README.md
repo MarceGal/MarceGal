@@ -11,9 +11,7 @@ You can click the Preview link to take a look at your changes.
 
 👋 Hola, soy @MarceGal,
 
-Llevo 18 años ayudando marcas a escalar sus canales de comunicación y ventas en la nueva economía digital. 
-Inicié mi camino en pequeños estudios de diseño, hasta trabajar para grandes marcas a través de agencias interactivas, software factory, publicidad, cine, comunicación y asuntos públicos. He formado parte de equipos de desarrollo tecnológico, comunicación, marketing, ventas y recursos humanos. 
-Tuve el agrado de trabajar para marcas de la talla de Sprite, Dish Network, Universal Music, Barrick Gold, Turner, Claro, Lo-Jack, Molinos Río de la Plata, La Nación, Artear, Aysa, Gobierno de Misiones, Embajada de España, entro otras decenas de marcas no tan reconocidas, pero igual de desafiantes.
+Mi nombre es Marce y en los últimos 19 años me he dedicado a  impulsar y escalar marcas a través de sus canales digitales de ventas y comunicación. He colaborado con marcas líderes en su sector de las cuales puedo destacar Sprite, Dish Network, Universal Music, Barrick Gold, Turner Broadcasting System, Claro, Lo-Jack, Molinos Río de la Plata, La Nación, Artear, Aysa, Embajada de España, Gobierno de Misiones, entre otras decenas de compañías no tan conocidas, pero igual de desafiantes.
 
 Mis campos de acción son :
 
