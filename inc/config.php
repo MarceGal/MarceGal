@@ -1,14 +1,23 @@
 <?php 
 
 $base_url="//marcegal.local/";
-$cdn_url="//archivo/static.marcelogalarza.com.ar/2020/website/";
+$cdn_url="//static.marcegal.local/2020/website/";
 $devMode = true;
+$contactFormEnabled = false;
+
+if($_SERVER["SERVER_NAME"]=="localhost" )
+{
+    $base_url="//localhost/";
+}
 
 if($_SERVER["SERVER_NAME"]=="www.marce.ga" || $_SERVER["SERVER_NAME"]=="marce.ga")
 {
     $base_url="//marce.ga/";
-    $cdn_url="//marce.ga/static/2020/website/";
+    $cdn_url="//marce.ga/.static/2020/website/";
+    $devMode = false;
 }
+
+//$cdn_url="//marce.ga/.static/2020/website/";
 
 //https://getbootstrap.com/docs/4.0/layout/grid/
 
@@ -19,13 +28,9 @@ function img($path){
     global $cdn_url;    
     $path = $cdn_url.$path;
     $str= '<img
-
-        alt=""         
         
         class="img-fluid lazy rounded"
-
-        loading=lazy
-
+        
         src="'.$path.'"        
 
         src-src="'.$path.'" 
@@ -35,6 +40,11 @@ function img($path){
         '.$path.' 600w, 
         '.$path.' 400w, 
         '.$path.' 300w"
+        
+        alt=""         
+        
+        loading="lazy"
+
         
         />';
 
@@ -55,13 +65,13 @@ function portfolioItemRenderer($temp1,$temp2,$temp3,$temp4){
     <div class="<?= $col_settings ?> portfolio-item filter-<?= $temp1 ?>">
 
         <div class="portfolio-wrap card shadowed rounded">
-           
+
             <a href="<?=$base_url?>portfolio/<?= $temp2 ?>" data-vbtype="iframe" class="venobox">
-                
+
                 <div class="overlay"></div>
-                
+
                 <i class="icofont-spinner-alt-5 preload-icon"></i>
-                 
+
                 <?=img('portfolio/'.$temp2.'/cover.jpg')?>
 
                 <div class="portfolio-info info">
@@ -75,7 +85,7 @@ function portfolioItemRenderer($temp1,$temp2,$temp3,$temp4){
 
     </div>
 
-    <?php
+<?php
 
 }
 

@@ -11,7 +11,7 @@
   <meta content="" name="descriptison">
   <meta content="" name="keywords">
 
-  <?php include '../../inc/styles.php' ?>
+  <?php include '../../inc/header-scripts.php' ?>
 
 
   <style>

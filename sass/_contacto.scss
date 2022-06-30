@@ -3,25 +3,35 @@
   --------------------------------------------------------------*/
 
 .contact {
+
     .info-box {
-        color: $gray-600;
+
         padding: 1rem;
         width: 100%;
+
         i.icon {
             font-size: 2rem;
             color: $tertiary;
             float: left;
-            margin: -0.5rem 1rem 0 0;
+            margin-right: 1rem;
+            margin-top: -0.6rem;
         }
+
         h3 {
             font-size: $fs-h3;
             line-height: $lh-h3;
             font-weight: $fw-h2;
             letter-spacing: $lttspa-h3;
         }
+
         p {
             margin: 1rem 0 0 3rem;
+            a {
+                text-decoration: underline;
+                font-weight: bolder;
+            }
         }
+
         .social-links {
             margin: 1rem 0 0 3rem;
             display: flex;
@@ -35,7 +45,9 @@
                 }
             }
         }
+        
     }
+
     .php-email-form {
         padding: 4rem 2rem;
         background: rgba(0, 0, 0, .02);
@@ -85,4 +97,33 @@
             }
         }
     }
+
+}
+
+@media (max-width: 768px) {
+
+    .contact {
+
+        .container{
+            
+            .info-box {
+
+                padding: 0;
+            
+                i.icon {
+                    font-size: 1.5rem;
+                    margin-top: 0;
+                }
+
+                h3 {
+                    font-size: $fs-h3-sm;
+                    line-height: $lh-h3-sm;
+                }
+                
+            }
+        
+        }
+
+    }
+
 }

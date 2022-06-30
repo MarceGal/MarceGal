@@ -1,13 +1,11 @@
+navigator.serviceWorker.register( '/assets/js/sw.js' );
 !(function($) {
+    
     "use strict";
-
-
 
     /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
     /*Mobile Navegation Menu */
     /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
-
-
 
     function createMobileMenu() {
 
@@ -18,7 +16,7 @@
             });
 
             $('body').append($mobile_nav);
-            $('body').prepend('<button type="button" class="mobile-nav-toggle d-lg-none"><div class="bar"></div></button>');
+            $('body').prepend('<button type="button" class="mobile-nav-toggle d-md-none"><div class="bar"></div></button>');
             $('body').append('<div class="mobile-nav-overly"></div>');
 
             $(document).on('click', '.mobile-nav-toggle', function(e) {
@@ -159,10 +157,6 @@
     });
     */
 
-    /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
-    /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
-    /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
-
     // Porfolio isotope and filter
     // https://isotope.metafizzy.co/
 
@@ -187,6 +181,10 @@
     // Docs: https://veno.es/venobox/
 
     $(document).ready(function() {
+        
+        if ( "loading" in HTMLImageElement.prototype ) {
+            console.log("`lazy-loading` soportado...");
+        }
 
         $('.venobox').venobox({
             'share': false,
@@ -228,13 +226,10 @@
             if (st < 600) {
                 //$(".cover-header .container").css("opacity", 1 - (st / 600));
                 //console.log('scroll:' + st);
-                $('img.portrait.reveal-up').css('opacity', 0);
+                //$('img.portrait.reveal-up').css('opacity', 0);            
             }
 
         });
-
-
-
 
     });
 
@@ -246,7 +241,7 @@
 
     $('.portfolio-details-carousel').owlCarousel({
         autoplay: true,
-        autoplayTimeout: 2000,
+        autoplayTimeout: 4000,
         dots: true,
         loop: true,
         margin: 40,
@@ -290,123 +285,61 @@
     });
 
 
-
-
     /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
     /*ANIMATIONS */
     /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
-
-    // Gsap Animations
-
-    var square1 = $('img.me');
-
-    function animateAboutSection() {
-
-        gsap.fromTo(square1, { opacity: 0, y: 100 }, {
-            duration: 1,
-            ease: "expo.inOut",
-            y: 0,
-            opacity: 1,
-            delay: 0.3,
-            onComplete: myFunc
-        });
-
-        // $('body::before').css('background-color', '#ffc107');
-
-        $('.about-me .content p ').css('opacity', 0);
-        $('.values .icon-box').css('opacity', 0);
-
-    }
-
-
-    function animateValues() {
+    $(window).on('load', function() {
 
         $('.values .icon-box').each(function(index) {
-            //console.log(index); //log every element found to console output
-            gsap.fromTo($(this), { opacity: 0, y: 50 }, {
-                duration: .2,
-                ease: "expo.inOut",
-                y: 0,
-                opacity: 1,
-                delay: 0.1 * (index),
-            });
+
+            //console.log(index); 
+
+            $(this).attr({'data-aos':"fade-up"});
+            
+            $(this).attr({'data-aos-delay': 1000 +( 200 * index)});
+            
+            
         });
 
-    };
+        $('img.portrait').each(function(index) {
 
-    function myFunc() {
+            //console.log(index); 
 
-        /*
-        gsap.fromTo('.p-1', { opacity: 0, y: 100 }, {
-            duration: 1,
-            ease: "expo.inOut",
-            y: 0,
-            opacity: 1,
-            delay: 0,
+            $(this).attr({'data-aos':"fade-up"});
+            
         });
 
-        gsap.fromTo('.p-2', { opacity: 0, y: 100 }, {
-            duration: 1,
-            ease: "expo.inOut",
-            y: 0,
-            opacity: 1,
-            delay: 0.2,
-        });
-        */
+        $('.fade-up'). each(function(index) {
 
-        $('.about-me .content p').each(function(index) {
-            var element = $(this);
-            $(element).css('opacity', 0);
-            $(this).waypoint(function(direction, event) {
-                gsap.fromTo($(element), { opacity: 0, y: 100 }, {
-                    duration: 1,
-                    ease: "expo.inOut",
-                    y: 0,
-                    opacity: 1,
-                    delay: 0.2 * index,
-                });
-
-            }, { offset: 'right-in-view' });
-
+            $(this).attr({'data-aos':"fade-up"});
+            
         });
 
-        $('.about .values').waypoint(animateValues, {
-            offset: "85%"
+        AOS.init({
+
+            // Global settings:
+            disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+            startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+            initClassName: 'aos-init', // class applied after initialization
+            animatedClassName: 'aos-animate', // class applied on animation
+            useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+            disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+            debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+            throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+            // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+            offset: 120, // offset (in px) from the original trigger point
+            delay: 50, // values from 0 to 3000, with step 50ms
+            duration: 300, // values from 0 to 3000, with step 50ms
+            easing: 'ease-in-out', // default easing for AOS animations
+            once: false, // whether animation should happen only once - while scrolling down
+            mirror: false, // whether elements should animate out while scrolling past them
+            anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+            
         });
-
-
-
-    }
-
-    $('.nav-menu .about a').on('click', animateAboutSection);
-
-
-    function animatePortraits() {
-
-        $('.portrait.reveal-up').each(function(index) {
-            //console.log(index); //log every element found to console output
-            gsap.fromTo($(this), { opacity: 0, y: 200 }, {
-                duration: 1,
-                ease: "expo.inOut",
-                y: 0,
-                opacity: 1,
-                delay: 0,
-            });
-        });
-
-    };
-
-
-    $('.portrait.reveal-up').waypoint(function() {
-
-        animatePortraits();
-
-    }, {
-        offset: "85%"
+    
     });
-
-
+    
 
 
 })(jQuery);

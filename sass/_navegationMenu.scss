@@ -72,14 +72,14 @@
     cursor: pointer;
     text-align: right;
     &.contrast {
-        background: #fff;
+        background: #ffffff;
         width: 50px;
         height: 50px;
         border-radius: 99%;
-        padding: 10px 0 0 8px;
-        bottom: 35px;
+        padding: 10px 0 0 12px;
+        bottom: 15px;
         top: auto;
-        right: calc(50vw - 35px);
+        right: calc(50vw - 18px);
         i {
             color: $mobile-nav-color-contrast;
         }
@@ -89,7 +89,7 @@
     }
     .bar {
         position: relative;
-        width: 35px;
+        width: 26px;
         height: 4px;
         background: $nav-color;
     }
@@ -113,7 +113,18 @@
     }
 }
 
-.mobile-nav {
+body.mobile-nav-active
+{
+    .mobile-nav-toggle {
+        &.contrast {
+            padding-top: 0px;
+        }   
+    }
+}
+
+
+.mobile-nav 
+{
     position: fixed;
     top: 0;
     right: -50%;
@@ -129,6 +140,7 @@
     border: 0;
     text-align: right;
     width: 60%;
+    display: flex;
     * {
         margin: 0;
         padding: 0;
@@ -143,13 +155,15 @@
         line-height: $m-nav-lh;
         font-weight: $m-nav-fw;
         outline: none;
+        text-decoration: none;
         &:hover {
             color: $primary;
             text-decoration: none;
         }
     }
     ul {
-        margin: 6rem 1rem 0 0;
+        /*margin: 6rem 1rem 0 0;*/
+        align-self: center;
     }
     .active>a {
         color: $primary;
@@ -183,14 +197,18 @@
         visibility: visible;
         right: 0;
     }
-    .mobile-nav-toggle .bar {
-        background: transparent;
+    .mobile-nav-toggle {
+        .bar {
+            background: transparent;
+        }
     }
     .mobile-nav-toggle .bar:before,
-    .mobile-nav-toggle .bar:after {
-        background: $nav-color;
+    .mobile-nav-toggle .bar:after 
+    {
+        background: $mobile-nav-color-contrast;
     }
-    .mobile-nav-toggle .bar:after {
+    .mobile-nav-toggle .bar:after 
+    {
         -webkit-transform: rotate(-45deg);
         transform: rotate(-45deg);
         bottom: 0;
@@ -200,9 +218,10 @@
         transform: rotate(45deg);
         top: 0;
     }
-    @media (max-width:420px) {
-        .mobile-nav {
-            width: 100%;
-        }
+}
+
+@media (max-width: 540px) {
+    .mobile-nav {
+        width: 100%;
     }
 }

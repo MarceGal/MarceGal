@@ -72,7 +72,7 @@ $nav-bg-color: transparent;
 $nav-color: #fff;
 $nav-color-contrast: #000;
 $nav-bg-color-contrast: #fff;
-$mobile-nav-color-contrast: $primary;
+$mobile-nav-color-contrast: $secondary;
 $mobile-nav-bg-color-contrast: transparent;
 $h1-color:#fff;
 $h2-color:#fff;
@@ -101,14 +101,21 @@ $fs-h1: 4rem;
 $lh-h1: 4.5rem;
 $fw-h1: 700;
 $lttspa-h1: -0.03rem;
+//
 $fs-h2: 2.4rem;
 $lh-h2: 3rem;
 $fw-h2: 700;
 $lttspa-h2: -0.04rem;
+$fs-h2-sm: 1.6rem;
+$lh-h2-sm: 2rem;
+//
 $fs-h3: 2rem;
 $fw-h3: 400;
 $lh-h3: 2rem;
 $lttspa-h3: -0.04rem;
+$fs-h3-sm: 1.4rem;
+$lh-h3-sm: 1.8rem;
+//
 $fs-h4: 1.8rem;
 $fs-h6: 1.4rem;
 $nav-fs: 1.4rem;
@@ -118,6 +125,12 @@ $m-nav-fs: 2rem;
 $m-nav-lh: 2rem;
 $m-nav-fw: 900;
 $image-text-over-color:rgba(255, 255, 255, 1);
+//mobile
+$mfs: 1.2rem;
+$mlh: 2rem;
+//mobile
+$mfs-h2: 1.6rem;
+
 
 /*Transiciones*/
 

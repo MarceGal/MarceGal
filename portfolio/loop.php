@@ -5,15 +5,15 @@
 
     <?php    
     
-    echo portfolioItemRenderer('social-media','axionlog','Axionlog','Social Media'); 
+    echo portfolioItemRenderer('social-media','axionlog','Axionlog','Estrategia'); 
     
-    echo portfolioItemRenderer('social-media','afs','AFS','Social Media'); 
+    echo portfolioItemRenderer('social-media','afs','American Foodservice','Estrategia'); 
 
-    echo portfolioItemRenderer('web','swancustombasses','Swan','Web UX/UI');
+    echo portfolioItemRenderer('web','swancustombasses','Swan Custom Basses','Web UX/UI');
 
     echo portfolioItemRenderer('web','pixowl','Pixowl','Web UX/UI');
 
-    echo portfolioItemRenderer('app','aysa','Aysa','UX/UI');
+    echo portfolioItemRenderer('ux-ui web','aysa','Aysa Panel','UX/UI');
 
     // echo portfolioItemRenderer('web','claro-rrhh','Claro RRHH','UX/UI'); 
 
@@ -32,6 +32,6 @@
 
     
     ?>
-    
+
 
 </div>

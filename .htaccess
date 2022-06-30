@@ -1,0 +1,4 @@
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^marce\.ga [NC]
+RewriteCond %{SERVER_PORT} 80
+RewriteRule ^(.*)$ https://marce.ga/$1 [R,L]

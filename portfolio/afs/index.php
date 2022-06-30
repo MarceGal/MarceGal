@@ -10,7 +10,7 @@
     <meta content="" name="descriptison">
     <meta content="" name="keywords">
 
-    <?php include '../../inc/styles.php' ?>
+    <?php include '../../inc/header-scripts.php' ?>
 
     <style>
     /* */
@@ -84,8 +84,8 @@
                     <img src="<?=$cdn_url?>portfolio/afs/logo.svg" alt="" class="logo img-fluid">
                 </a>
 
-                <p class="font-weight-bold m-0">American FoodService</p>
-                <h1><span class="featured-text">Abastecimiento en toda LATAM</span>, desde un solo lugar</h1>
+                <p class="font-weight-bold m-0">American Foodservice</p>
+                <h1>Mucho más que <span class="featured-text">productos gastrónomicos</span></h1>
                 <?=getSvgIcon ("scrollDownIcon");?>
 
             </div>
@@ -97,32 +97,34 @@
         <!-- ======= Portfolio Details ======= -->
         <div id="portfolio-details" class="portfolio-details">
 
-            <div class="el-cliente position-relative p-5 bg-secondary  using-image blend-luminosity">
+            <div class="el-cliente position-relative p-md-5 bg-secondary using-image blend-luminosity">
 
                 <div class="container">
 
                     <div class="row">
 
-                        <div class="col-lg-6 p-sm-3 p-md-5 align-self-lg-start align-content-sm-end">
+                        <div class="col-md-6 p-5 p-md-5 align-self-lg-start align-content-sm-end">
 
                             <div class="section-title">
                                 <p class="text-dark">Intro</p>
                                 <h2>El cliente</h2>
                             </div>
 
-                            <p><strong>American FoodService</strong> es una organización multinacional dedicada al
-                                desarrollo, comercialización y distribución de productos gastronómicos seleccionados.
-                                Con presencia en 8 países de Latinoamérica, son el mayor distribuidor especializado en
+                            <p><strong>American FoodService</strong> es una organización regional dedicada al
+                                desarrollo, comercialización y distribución de productos gastronómicos.
+                                Con presencia en <strong class="featured-text">8 países</strong> dentro de Latinoamérica, son el mayor distribuidor especializado en
                                 la región.</p>
 
 
                         </div>
 
 
-                        <div class="col-lg-6 px-5">
+                        <div class="col-md-6 px-0 px-md-5">
 
-                            <img class="img-fluid float-md-right portrait shadowed rounded mt--30vh"
-                                src="<?=$cdn_url?>portfolio/afs/1400.900/bg.1.portrait.jpg" alt="" loading=lazy>
+                            <img class="img-fluid float-md-right portrait shadowed mt--30vh rounded sm-not-rounded"
+                                src="<?=$cdn_url?>portfolio/afs/1400.900/bg.1.portrait.jpg" alt="" loading="lazy">
+
+                            
 
                         </div>
 
@@ -137,26 +139,23 @@
 
                 <div class="container">
 
-
                     <div class="row">
 
-                        <div class="col-lg-6 px-5">
+                        <div class="col-md-6 px-0 px-md-5 md-order-2">
 
                             <img class="img-fluid float-md-right portrait shadowed rounded mt--10vh"
-                                src="<?=$cdn_url?>portfolio/afs/1400.900/bg.2.portrait.jpg" alt="" loading=lazy>
+                                src="<?=$cdn_url?>portfolio/afs/1400.900/bg.2.portrait.jpg" alt="" loading="lazy">
 
                         </div>
-
-                        <div class="col-lg-6 p-5 bg-secondary rounded align-self-end">
+                        
+                        <div class="col-lg-6 pb-3 pt-md-5 md-order-1 p-lg-0 bg-secondary rounded align-self-end">
 
                             <div class="section-title">
-                                <p class="text-dark">El desafio</p>
-                                <h2>El problema</h2>
+                                <p class="text-dark">Aquí vamos con </p>
+                                <h2>el desafio</h2>
                             </div>
 
-                            <p>Apalancado por el buen desempeño de las operaciones en canales off-line, nuestro objetivo
-                                era ganar terreno en canales digitales. Llevar adelante (sin publicidad) la difusión de
-                                su propuesta de valor, productos y servicios.</p>
+                            <p>Ganar terreno en canales digitales. Llevar adelante la difusión de su propuesta de valor: productos y servicios a segmentos especificos.</p>
 
                         </div>
 
@@ -179,8 +178,8 @@
                         <div class="col-lg-5 p-md-5 align-self-lg-start align-content-sm-end">
 
                             <div class="section-title">
-                                <p class="text-dark">El plan </p>
-                                <h2>La solución</h2>
+                                <p class="text-dark">El plan y</p>
+                                <h2>la solución</h2>
                             </div>
 
                         </div>
@@ -189,15 +188,21 @@
 
                         <div class="col-lg-6 align-self-lg-center align-content-sm-start">
 
-                            <p>Crear una estrategia que permitan la creación ágil de contenidos, fácilmente consumibles
-                                en canales internos y externos. Intranet, Chats colaborativos, correos electrónicos y
-                                redes sociales.</p>
+                            <p>Definir una estrategia y flujos de trabajo que permitan la producción ágil de contenidos para canales comerciales.</p>
+
+                            <p><strong>Canales:</strong></p>
+
+                            <ul>
+                                <li>Plataformas colaborativas</li>
+                                <li>Mensajeria y Correos electrónicos</li>
+                                <li>Redes sociales</li>
+                            </ul>
 
                             <p><strong>Mis responsabilidades:</strong></p>
 
                             <ul>
                                 <li>Estrategia de contenidos</li>
-                                <li>Diseño</li>
+                                <li>Diseño y comunicación</li>
                                 <li>Analítica</li>
                             </ul>
 
@@ -271,7 +276,7 @@
 
             <div class="container">
 
-                <div class="spacer pt-5 pb-5"></div>
+                <div class="spacer pt-0 pb-0 pb-sm-5"></div>
 
                 <div class="row">
 
@@ -279,24 +284,25 @@
 
                         <div class="owl-carousel portfolio-details-carousel">
 
-                            <img src="<?=$cdn_url?>portfolio/afs/1400.900/post.1.png" class="img-fluid lazy"
-                                loading=lazy>
-                            <img src="<?=$cdn_url?>portfolio/afs/1400.900/post.2.png" class="img-fluid lazy"
-                                loading=lazy>
-                            <img src="<?=$cdn_url?>portfolio/afs/1400.900/post.3.png" class="img-fluid lazy"
-                                loading=lazy>
-                            <img src="<?=$cdn_url?>portfolio/afs/1400.900/post.4.png" class="img-fluid lazy"
-                                loading=lazy>
-                            <img src="<?=$cdn_url?>portfolio/afs/1400.900/post.5.png" class="img-fluid lazy"
-                                loading=lazy>
+                            <img src="<?=$cdn_url?>portfolio/afs/1400.900/post_r1_c1_s1.jpg" class="img-fluid lazy"
+                                loading="lazy">
+                            <img src="<?=$cdn_url?>portfolio/afs/1400.900/post_r1_c2_s1.jpg" class="img-fluid lazy"
+                                loading="lazy">
+                            <img src="<?=$cdn_url?>portfolio/afs/1400.900/post_r1_c3_s1.jpg" class="img-fluid lazy"
+                                loading="lazy">
+                            <img src="<?=$cdn_url?>portfolio/afs/1400.900/post_r1_c4_s1.jpg" class="img-fluid lazy"
+                                loading="lazy">
+                            <img src="<?=$cdn_url?>portfolio/afs/1400.900/post_r1_c5_s1.jpg" class="img-fluid lazy"
+                                loading="lazy">
 
                         </div>
 
                     </div>
+                
 
                 </div>
 
-                <div class="spacer py-md-5"></div>
+                <div class="spacer pb-3"></div>
 
             </div><!-- End section -->
 
@@ -320,9 +326,9 @@
 
                         <div class="col-lg-6 align-self-lg-center align-content-sm-start">
 
-                            <p>Mi misión en American Food Service es seguir acompañando su estrategia de contenidos, dar
-                                soporte a los equipos comerciales y nutrir su comunicación visual, desde lo estratégico
-                                hasta lo creativo.</p>
+                            <p>Mi misión en <b>American Foodservice</b> es acompañar el crecimiento de la organización.
+                                Dar soporte a los equipos comerciales y nutrir sus canales digitales, desde lo
+                                estratégico hasta lo creativo.</p>
 
                         </div>
 

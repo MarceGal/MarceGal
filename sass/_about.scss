@@ -2,37 +2,22 @@
   # About
   --------------------------------------------------------------*/
 
-@media (max-width: 768px) {
-    #about {
-        .section-title {
-            h3 {
-                padding: 0;
-            }
-        }
-        &.section-show {
-            img {
-                &.me {
-                    margin-bottom: 2rem;
-                }
-            }
-        }
-    }
-}
-
 #about {
-    .section-title {
-        p {
-            margin: -1rem 0 0;
-        }
-    }
-    &.section-show {
+    
+    background-color: $secondary;
+
+    &.section-show 
+    {
         img {
             &.me {
                 /*-webkit-box-shadow: 4rem 4rem 0px 0px $secondary-200;
                 -moz-box-shadow: 4rem 4rem 0px 0px $secondary-200;
                 box-shadow: 4rem 4rem 0px 0px $secondary-200;
                 border-radius: 0 1rem;*/
+                max-width: 100%;  
+                margin-top: 4rem;  
             }
+
         }
     }
     .icon-box {
@@ -67,4 +52,26 @@
     p:last-child {
         margin-bottom: 0;
     }
+}
+
+@media (max-width: 768px) {
+
+    #about {
+
+        .section-title {
+            h3 {
+                padding: 0;
+            }
+        }
+
+        &.section-show {
+            img {
+                &.me {
+                    margin-bottom: 2rem;
+                }
+            }
+        }
+
+    }
+
 }
